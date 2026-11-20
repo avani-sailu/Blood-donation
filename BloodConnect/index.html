@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BloodConnect - Donate • Help • Save Lives</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Navigation Bar (Module 1) -->
+  <header class="main-header">
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/images/logo.png" alt="BloodConnect AI Logo" class="nav-logo">
+        <div class="nav-title-group">
+          <span class="nav-title">BloodConnect <span style="color:var(--color-primary); font-size:17px;">AI</span></span>
+          <span class="nav-tagline">Smart Donor & Notification System</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu" id="navbar-menu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="blood-requests.html" class="nav-link">Find Blood</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="find-donors.html" class="nav-link">Find Donors</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-auth-buttons" id="navbar-auth-section">
+        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+        <a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a>
+      </div>
+
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section (Module 1.2) -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-tag">
+              <span>🤖</span> Smart Blood Donor & AI-Powered Real-Time Notification System
+            </div>
+            <h1 class="hero-title">
+              Donate Blood, <span>Save Lives</span>
+            </h1>
+            <p class="hero-desc">
+              BloodConnect bridges the urgent gap between patients in critical need and verified donors ready to give the gift of life. Experience instant matching, real-time coordination, and transparent request tracking.
+            </p>
+            <div class="hero-cta-group">
+              <a href="blood-requests.html" class="btn btn-primary btn-lg">🔍 Find Blood</a>
+              <a href="signup.html" class="btn btn-dark-red btn-lg">🩸 Become a Donor</a>
+              <a href="create-request.html" class="btn btn-outline btn-lg">➕ Request Blood</a>
+            </div>
+          </div>
+
+          <div class="hero-image-wrapper">
+            <div class="hero-image-card">
+              <img src="assets/images/logo.png" alt="BloodConnect Hero Emblem" class="hero-logo-img">
+              <div class="hero-card-pulse">
+                <div class="hero-stat-mini">
+                  <div class="number">100%</div>
+                  <div class="label">Voluntary</div>
+                </div>
+                <div class="hero-stat-mini">
+                  <div class="number">&lt; 15m</div>
+                  <div class="label">Avg Match</div>
+                </div>
+                <div class="hero-stat-mini">
+                  <div class="number">24/7</div>
+                  <div class="label">Emergency</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section (Module 1.3) -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Our Mission</span>
+          <h2 class="section-title">Connecting Hearts, Giving Life</h2>
+          <p class="section-subtitle">Bridging emergency blood requirements with compassionate community donors.</p>
+        </div>
+
+        <div class="about-grid">
+          <div>
+            <div class="about-card">
+              <h3>Our Vision</h3>
+              <p style="color:var(--color-text-muted); font-size:14.5px;">
+                No patient should suffer or lose a life waiting for blood. BloodConnect aims to create an omnipresent digital support system accessible anywhere across the country.
+              </p>
+            </div>
+            <div class="about-card" style="border-left-color: var(--color-success);">
+              <h3>Our Mission</h3>
+              <p style="color:var(--color-text-muted); font-size:14.5px;">
+                Empower citizens through technology to publish urgent blood requests, notify matching blood group donors in real-time, and streamline donor acceptance and fulfillment.
+              </p>
+            </div>
+          </div>
+
+          <div style="background:var(--color-bg); padding:32px; border-radius:var(--radius-lg); border:1px solid var(--color-border);">
+            <h3 style="font-size:22px; margin-bottom:14px; color:var(--color-primary-dark);">Why BloodConnect?</h3>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:14px;">
+              <li style="display:flex; gap:12px; font-size:14.5px;">
+                <span style="color:var(--color-success); font-weight:bold; font-size:18px;">✓</span>
+                <div><strong>Direct Request & Accept:</strong> Requesters publish requirements and donors directly accept.</div>
+              </li>
+              <li style="display:flex; gap:12px; font-size:14.5px;">
+                <span style="color:var(--color-success); font-weight:bold; font-size:18px;">✓</span>
+                <div><strong>Location-Based Matching:</strong> Donors and requests mapped across cities and hospital zones.</div>
+              </li>
+              <li style="display:flex; gap:12px; font-size:14.5px;">
+                <span style="color:var(--color-success); font-weight:bold; font-size:18px;">✓</span>
+                <div><strong>Built-in Chat & Coordination:</strong> Direct messaging between donor and patient family.</div>
+              </li>
+              <li style="display:flex; gap:12px; font-size:14.5px;">
+                <span style="color:var(--color-success); font-weight:bold; font-size:18px;">✓</span>
+                <div><strong>End-to-End Status Tracking:</strong> From Open to In Progress, Donor Selected, and Completed.</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section (Module 1.4) -->
+    <section class="steps-section" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Simple & Fast Workflow</span>
+          <h2 class="section-title">How BloodConnect Works</h2>
+          <p class="section-subtitle">Four simple steps from request publication to life-saving transfusion.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3 class="step-title">Register</h3>
+            <p class="step-desc">Sign up as a donor or requester with your blood group and location details.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3 class="step-title">Create / Find Request</h3>
+            <p class="step-desc">Post a blood requirement with patient details, hospital location, and urgency.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3 class="step-title">Accept a Request</h3>
+            <p class="step-desc">Matching eligible donors accept requests and confirm their availability time.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h3 class="step-title">Connect & Donate</h3>
+            <p class="step-desc">Requester selects donor, coordinates via chat, and completes the donation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blood Groups Compatibility Section (Module 1.5) -->
+    <section class="blood-groups-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Compatibility Guide</span>
+          <h2 class="section-title">Blood Groups & Compatibility</h2>
+          <p class="section-subtitle">Explore compatibility to understand which donors can donate to whom.</p>
+        </div>
+
+        <div class="blood-grid">
+          <!-- O- -->
+          <div class="blood-card">
+            <div class="blood-header">
+              <span class="blood-type">O-</span>
+              <span class="blood-badge" style="background:#E8F5E9; color:#2E7D32;">Universal Donor</span>
+            </div>
+            <div class="blood-info">Can donate red blood cells to anyone of any blood group in emergencies.</div>
+            <div class="blood-give"><span class="blood-label">Can Give To:</span> All Blood Types (Universal)</div>
+            <div class="blood-receive"><span class="blood-label">Can Receive:</span> O- only</div>
+          </div>
+
+          <!-- O+ -->
+          <div class="blood-card">
+            <div class="blood-header">
+              <span class="blood-type">O+</span>
+              <span class="blood-badge">Most Requested</span>
+            </div>
+            <div class="blood-info">Most common blood type; in constant high demand by hospitals.</div>
+            <div class="blood-give"><span class="blood-label">Can Give To:</span> O+, A+, B+, AB+</div>
+            <div class="blood-receive"><span class="blood-label">Can Receive:</span> O+, O-</div>
+          </div>
+
+          <!-- A+ -->
+          <div class="blood-card">
+            <div class="blood-header">
+              <span class="blood-type">A+</span>
+              <span class="blood-badge">Common</span>
+            </div>
+            <div class="blood-info">Very common blood type; essential for platelets and red cells.</div>
+            <div class="blood-give"><span class="blood-label">Can Give To:</span> A+, AB+</div>
+            <div class="blood-receive"><span class="blood-label">Can Receive:</span> A+, A-, O+, O-</div>
+          </div>
+
+          <!-- A- -->
+          <div class="blood-card">
+            <div class="blood-header">
+              <span class="blood-type">A-</span>
+              <span class="blood-badge">Rare</span>
+            </div>
+            <div class="blood-info">Can give red cells to both positive and negative A and AB patients.</div>
+            <div class="blood-give"><span class="blood-label">Can Give To:</span> A+, A-, AB+, AB-</div>
+            <div class="blood-receive"><span class="blood-label">Can Receive:</span> A-, O-</div>
+          </div>
+
+          <!-- B+ -->
+          <div class="blood-card">
+            <div class="blood-header">
+              <span class="blood-type">B+</span>
+              <span class="blood-badge">High Demand</span>
+            </div>
+            <div class="blood-info">Important for trauma and oncology treatments.</div>
+            <div class="blood-give"><span class="blood-label">Can Give To:</span> B+, AB+</div>
+            <div class="blood-receive"><span class="blood-label">Can Receive:</span> B+, B-, O+, O-</div>
+          </div>
+
+          <!-- B- -->
+          <div class="blood-card">
+            <div class="blood-header">
+              <span class="blood-type">B-</span>
+              <span class="blood-badge">Rare</span>
+            </div>
+            <div class="blood-info">One of the rarest blood groups. Every donor makes an enormous impact.</div>
+            <div class="blood-give"><span class="blood-label">Can Give To:</span> B+, B-, AB+, AB-</div>
+            <div class="blood-receive"><span class="blood-label">Can Receive:</span> B-, O-</div>
+          </div>
+
+          <!-- AB+ -->
+          <div class="blood-card">
+            <div class="blood-header">
+              <span class="blood-type">AB+</span>
+              <span class="blood-badge" style="background:#E1F5FE; color:#0277BD;">Universal Recipient</span>
+            </div>
+            <div class="blood-info">Can safely receive red blood cells from any blood type.</div>
+            <div class="blood-give"><span class="blood-label">Can Give To:</span> AB+ only</div>
+            <div class="blood-receive"><span class="blood-label">Can Receive:</span> All Blood Types</div>
+          </div>
+
+          <!-- AB- -->
+          <div class="blood-card">
+            <div class="blood-header">
+              <span class="blood-type">AB-</span>
+              <span class="blood-badge">Rarest Type</span>
+            </div>
+            <div class="blood-info">Less than 1% of the population has AB negative blood.</div>
+            <div class="blood-give"><span class="blood-label">Can Give To:</span> AB+, AB-</div>
+            <div class="blood-receive"><span class="blood-label">Can Receive:</span> AB-, A-, B-, O-</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Banner (Module 1.6) -->
+    <section class="stats-banner">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number" id="stats-donors-count">2,480+</div>
+            <div class="stat-title">Registered Donors</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" id="stats-requests-count">1,820+</div>
+            <div class="stat-title">Total Blood Requests</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" id="stats-completed-count">1,650+</div>
+            <div class="stat-title">Completed Donations</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action bar -->
+    <section style="background:var(--color-white); padding:60px 0; text-align:center;">
+      <div class="container">
+        <h2 style="font-size:30px; margin-bottom:12px;">Ready to Make a Difference?</h2>
+        <p style="color:var(--color-text-muted); font-size:16px; margin-bottom:24px; max-width:600px; margin-left:auto; margin-right:auto;">
+          A single blood donation can save up to three lives. Register today or publish a blood requirement in minutes.
+        </p>
+        <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+          <a href="signup.html" class="btn btn-primary btn-lg">Join BloodConnect Now</a>
+          <a href="blood-requests.html" class="btn btn-outline btn-lg">Browse Blood Requests</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (Module 1.7) -->
+  <footer class="main-footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">BloodConnect</div>
+          <p class="footer-brand-desc">
+            An online life-saving blood donation and emergency request management platform connecting willing donors with patients across hospitals.
+          </p>
+          <div style="display:flex; gap:12px; margin-top:14px;">
+            <a href="#" style="color:#B0BEC5; font-size:18px;">🌐</a>
+            <a href="#" style="color:#B0BEC5; font-size:18px;">📱</a>
+            <a href="#" style="color:#B0BEC5; font-size:18px;">✉️</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blood-requests.html">Blood Requests</a></li>
+            <li><a href="find-donors.html">Find Donors</a></li>
+            <li><a href="donation-interest.html">Donation Interest</a></li>
+            <li><a href="dashboard.html">User Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Features</div>
+          <ul class="footer-links">
+            <li><a href="create-request.html">Create Request</a></li>
+            <li><a href="my-requests.html">My Requests</a></li>
+            <li><a href="accepted-requests.html">Accepted Requests</a></li>
+            <li><a href="messages.html">Messaging System</a></li>
+            <li><a href="admin-dashboard.html">Admin Portal</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Emergency Contact</div>
+          <div class="footer-contact-item">
+            <span>🚨</span> <strong>Toll Free: 1800-BLOOD-HELP</strong>
+          </div>
+          <div class="footer-contact-item">
+            <span>📧</span> support@bloodconnect.org
+          </div>
+          <div class="footer-contact-item">
+            <span>📍</span> Mumbai • Bangalore • Pune • Delhi
+          </div>
+          <div class="footer-contact-item" style="margin-top:10px;">
+            <span class="badge urgency-critical" style="font-size:11px;">24/7 Response Active</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 BloodConnect. Final Year Project - Web Application Prototype.</div>
+        <div>Donate Blood • Help People • Save Lives</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+/* ==========================================================================
+   BloodConnect - Forms Stylesheet (forms.css)
+   ========================================================================== */
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.form-row-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.form-label {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--color-text);
+}
+
+.form-label .required {
+  color: var(--color-primary);
+  margin-left: 3px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 11px 14px;
+  font-size: 14.5px;
+  font-family: inherit;
+  color: var(--color-text);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+  outline: none;
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.15);
+}
+
+.form-control::placeholder {
+  color: var(--color-text-light);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Radio Cards (for Urgency Level) */
+.radio-cards-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.radio-card {
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.radio-card-content {
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  text-align: center;
+  transition: var(--transition);
+  font-weight: 600;
+  font-size: 13.5px;
+}
+
+.radio-card:hover .radio-card-content {
+  border-color: #B0BEC5;
+}
+
+.radio-card input[type="radio"]:checked + .radio-card-content {
+  border-color: var(--color-primary);
+  background: #FFF5F5;
+  color: var(--color-primary-dark);
+}
+
+.radio-card-critical input[type="radio"]:checked + .radio-card-content {
+  border-color: var(--color-danger);
+  background: #FFEBEE;
+  color: var(--color-danger);
+}
+
+.radio-card-urgent input[type="radio"]:checked + .radio-card-content {
+  border-color: var(--color-warning);
+  background: #FFF3E0;
+  color: var(--color-warning);
+}
+
+.radio-card-normal input[type="radio"]:checked + .radio-card-content {
+  border-color: var(--color-success);
+  background: #E8F5E9;
+  color: var(--color-success);
+}
+
+/* Checkbox & Switch */
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--color-primary);
+}
+
+.form-feedback {
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+.form-feedback.error {
+  color: var(--color-danger);
+}
+
+.form-feedback.success {
+  color: var(--color-success);
+}
+
+/* Filter bar styles */
+.filter-bar {
+  background: var(--color-white);
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.filter-search-box {
+  flex-grow: 1;
+  min-width: 240px;
+  position: relative;
+}
+
+.filter-select {
+  padding: 9px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  font-size: 13.5px;
+  color: var(--color-text);
+  outline: none;
+  background: var(--color-white);
+}
+
+.filter-select:focus {
+  border-color: var(--color-primary);
+}

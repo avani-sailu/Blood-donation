@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation Availability Posts - BloodConnect</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="main-header">
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/images/logo.png" alt="BloodConnect AI Logo" class="nav-logo">
+        <div class="nav-title-group">
+          <span class="nav-title">BloodConnect <span style="color:var(--color-primary); font-size:17px;">AI</span></span>
+          <span class="nav-tagline">Smart Donor & Notification System</span>
+        </div>
+      </a>
+      <ul class="nav-menu" id="navbar-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="blood-requests.html" class="nav-link">Blood Requests</a></li>
+        <li><a href="find-donors.html" class="nav-link">Find Donors</a></li>
+        <li><a href="donation-interest.html" class="nav-link active">Donation Posts</a></li>
+      </ul>
+      <div class="nav-auth-buttons" id="navbar-auth-section"></div>
+    </div>
+  </header>
+
+  <div class="container" style="padding-top:28px; padding-bottom:60px;">
+    <div class="content-header">
+      <div>
+        <h1 class="content-title">Donor Willingness & Availability</h1>
+        <p class="content-subtitle">Donors publish their upcoming availability so hospital coordinators can reach out proactively.</p>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1.1fr 1.9fr; gap:24px;">
+      <!-- Post Form (PRD Module 13) -->
+      <div class="dash-card">
+        <h3 class="dash-card-title" style="margin-bottom:16px;">Publish Donation Willingness</h3>
+        <form id="donation-interest-form">
+          <div class="form-group">
+            <label class="form-label" for="int-blood-group">Blood Group <span class="required">*</span></label>
+            <select id="int-blood-group" class="form-control" required>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="int-location">Preferred City / Hospital Zones <span class="required">*</span></label>
+            <input type="text" id="int-location" class="form-control" placeholder="e.g. Andheri, Bandra or Dadar" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="int-date">Available From Date <span class="required">*</span></label>
+            <input type="date" id="int-date" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="int-contact-pref">Contact Preference</label>
+            <select id="int-contact-pref" class="form-control">
+              <option value="In-App Messaging">In-App Messaging</option>
+              <option value="Phone Call & WhatsApp">Phone Call & WhatsApp</option>
+              <option value="Any channel">Any Channel</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="int-notes">Notes / Health Status</label>
+            <textarea id="int-notes" class="form-control" rows="3" placeholder="e.g. Hemoglobin 14.0, available weekend mornings."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Broadcast Availability</button>
+        </form>
+      </div>
+
+      <!-- Active Posts Feed (PRD Module 13) -->
+      <div>
+        <div class="dash-card-header" style="margin-bottom:14px;">
+          <h2 class="dash-card-title">Active Donor Availability Broadcasts</h2>
+        </div>
+        <div id="donation-interest-feed">
+          <!-- Injected via donors.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/donors.js"></script>
+  <script>
+    document.getElementById('int-date').value = new Date().toISOString().split('T')[0];
+  </script>
+</body>
+</html>

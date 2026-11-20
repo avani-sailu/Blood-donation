@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - BloodConnect</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="main-header">
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/images/logo.png" alt="BloodConnect AI Logo" class="nav-logo">
+        <div class="nav-title-group">
+          <span class="nav-title">BloodConnect <span style="color:var(--color-primary); font-size:17px;">AI</span> Admin</span>
+          <span class="nav-tagline">Smart Supervision & Moderation Console</span>
+        </div>
+      </a>
+      <div class="nav-auth-buttons">
+        <span class="badge status-selected" style="font-size:12px;">Admin Mode</span>
+        <a href="dashboard.html" class="btn btn-outline btn-sm">User View</a>
+        <button onclick="handleLogout()" class="btn btn-secondary btn-sm">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container" style="padding-top:28px; padding-bottom:60px;">
+    <div class="content-header">
+      <div>
+        <h1 class="content-title">System Administrator Dashboard</h1>
+        <p class="content-subtitle">Comprehensive monitoring of registered users, donors, requests, and life-saving transfusions.</p>
+      </div>
+      <div>
+        <button onclick="storage.resetAllData(); location.reload();" class="btn btn-secondary btn-sm" title="Reload clean seed dataset">
+          🔄 Reset Demo Database
+        </button>
+      </div>
+    </div>
+
+    <!-- Administrative Statistics (PRD Module 17) -->
+    <div class="stats-cards-grid" style="grid-template-columns: repeat(4, 1fr); margin-bottom:20px;">
+      <div class="stat-widget">
+        <div class="stat-widget-content">
+          <h3 id="admin-stat-users">0</h3>
+          <p>Total Registered Users</p>
+        </div>
+        <div class="stat-widget-icon stat-icon-blue">👥</div>
+      </div>
+      <div class="stat-widget">
+        <div class="stat-widget-content">
+          <h3 id="admin-stat-donors">0</h3>
+          <p>Total Registered Donors</p>
+        </div>
+        <div class="stat-widget-icon stat-icon-red">🩸</div>
+      </div>
+      <div class="stat-widget">
+        <div class="stat-widget-content">
+          <h3 id="admin-stat-requests">0</h3>
+          <p>Total Blood Requests</p>
+        </div>
+        <div class="stat-widget-icon stat-icon-amber">📋</div>
+      </div>
+      <div class="stat-widget">
+        <div class="stat-widget-content">
+          <h3 id="admin-stat-completed">0</h3>
+          <p>Completed Transfusions</p>
+        </div>
+        <div class="stat-widget-icon stat-icon-green">✓</div>
+      </div>
+    </div>
+
+    <div class="stats-cards-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom:28px;">
+      <div class="stat-widget">
+        <div class="stat-widget-content">
+          <h3 id="admin-stat-open">0</h3>
+          <p>Open Requests (Waiting)</p>
+        </div>
+        <div class="stat-widget-icon stat-icon-blue">⏱️</div>
+      </div>
+      <div class="stat-widget">
+        <div class="stat-widget-content">
+          <h3 id="admin-stat-accepted">0</h3>
+          <p>Accepted / In Progress</p>
+        </div>
+        <div class="stat-widget-icon stat-icon-amber">🤝</div>
+      </div>
+      <div class="stat-widget">
+        <div class="stat-widget-content">
+          <h3 id="admin-stat-cancelled">0</h3>
+          <p>Cancelled Requests</p>
+        </div>
+        <div class="stat-widget-icon stat-icon-red">❌</div>
+      </div>
+    </div>
+
+    <!-- Blood Requests Management Table -->
+    <div class="dash-card">
+      <div class="dash-card-header">
+        <h2 class="dash-card-title">Live Blood Requests Monitoring</h2>
+        <a href="blood-requests.html" class="btn btn-outline btn-sm">Public Feed</a>
+      </div>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Patient</th>
+              <th>Blood</th>
+              <th>Hospital & City</th>
+              <th>Update Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="admin-requests-table">
+            <!-- Injected via admin.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- User Management Table -->
+    <div class="dash-card">
+      <div class="dash-card-header">
+        <h2 class="dash-card-title">User & Donor Profile Management</h2>
+      </div>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>User ID</th>
+              <th>Name & Email</th>
+              <th>Blood</th>
+              <th>Location</th>
+              <th>Role</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="admin-users-table">
+            <!-- Injected via admin.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Content Moderation & Reports -->
+    <div class="dash-card">
+      <div class="dash-card-header">
+        <h2 class="dash-card-title">Platform Safety & Abuse Reports</h2>
+      </div>
+      <div id="admin-reports-container">
+        <!-- Injected via admin.js -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

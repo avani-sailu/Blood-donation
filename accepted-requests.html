@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accepted Requests - BloodConnect</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="main-header">
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/images/logo.png" alt="BloodConnect AI Logo" class="nav-logo">
+        <div class="nav-title-group">
+          <span class="nav-title">BloodConnect <span style="color:var(--color-primary); font-size:17px;">AI</span></span>
+          <span class="nav-tagline">Smart Donor & Notification System</span>
+        </div>
+      </a>
+      <div class="nav-auth-buttons" id="navbar-auth-section"></div>
+    </div>
+  </header>
+
+  <div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link">
+          <div class="sidebar-link-content"><span>📊</span> Dashboard</div>
+        </a>
+        <a href="create-request.html" class="sidebar-link">
+          <div class="sidebar-link-content"><span>➕</span> Create Request</div>
+        </a>
+        <a href="blood-requests.html" class="sidebar-link">
+          <div class="sidebar-link-content"><span>🔍</span> View Blood Requests</div>
+        </a>
+        <a href="my-requests.html" class="sidebar-link">
+          <div class="sidebar-link-content"><span>📋</span> My Requests</div>
+        </a>
+        <a href="find-donors.html" class="sidebar-link">
+          <div class="sidebar-link-content"><span>🩸</span> Find Donors</div>
+        </a>
+        <a href="accepted-requests.html" class="sidebar-link active">
+          <div class="sidebar-link-content"><span>🤝</span> Accepted Requests</div>
+        </a>
+        <a href="messages.html" class="sidebar-link">
+          <div class="sidebar-link-content"><span>💬</span> Messages</div>
+        </a>
+        <a href="notifications.html" class="sidebar-link">
+          <div class="sidebar-link-content"><span>🔔</span> Notifications</div>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <button onclick="handleLogout()" class="btn btn-secondary btn-block btn-sm">🚪 Logout</button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <div class="content-header">
+        <div>
+          <h1 class="content-title">Requests I Accepted</h1>
+          <p class="content-subtitle">Manage patient requests you have volunteered to donate blood for.</p>
+        </div>
+        <a href="blood-requests.html" class="btn btn-outline btn-sm">Browse More Requests</a>
+      </div>
+
+      <!-- Accepted Requests List (PRD Module 10) -->
+      <div id="accepted-requests-list">
+        <!-- Injected via requests.js -->
+      </div>
+    </main>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/requests.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration - BloodConnect</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="main-header">
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/images/logo.png" alt="BloodConnect AI Logo" class="nav-logo">
+        <div class="nav-title-group">
+          <span class="nav-title">BloodConnect <span style="color:var(--color-primary); font-size:17px;">AI</span></span>
+          <span class="nav-tagline">Smart Donor & Notification System</span>
+        </div>
+      </a>
+      <div class="nav-auth-buttons">
+        <span style="font-size:13.5px; color:var(--color-text-muted);">Already registered?</span>
+        <a href="login.html" class="btn btn-outline btn-sm">Log In</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-wrapper">
+    <div class="auth-card auth-card-wide">
+      <div class="auth-header">
+        <img src="assets/images/logo.png" alt="BloodConnect" class="auth-logo">
+        <h1 class="auth-title">Create BloodConnect Account</h1>
+        <p class="auth-subtitle">Join thousands of donors and requesters saving lives every day</p>
+      </div>
+
+      <form id="signup-form">
+        <!-- Full Name & Email -->
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="signup-fullname">Full Name <span class="required">*</span></label>
+            <input type="text" id="signup-fullname" class="form-control" placeholder="e.g. Rahul Sharma" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="signup-email">Email Address <span class="required">*</span></label>
+            <input type="email" id="signup-email" class="form-control" placeholder="rahul@example.com" required>
+          </div>
+        </div>
+
+        <!-- Phone & Blood Group -->
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="signup-phone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="signup-phone" class="form-control" placeholder="+91 98765 43210" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="signup-bloodgroup">Blood Group <span class="required">*</span></label>
+            <select id="signup-bloodgroup" class="form-control" required>
+              <option value="" disabled selected>Select Blood Group</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Password & Confirm Password -->
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="signup-password">Password <span class="required">*</span></label>
+            <div class="password-input-group">
+              <input type="password" id="signup-password" class="form-control" placeholder="Minimum 6 characters" required>
+              <button type="button" class="password-toggle-btn" data-target="signup-password">👁</button>
+            </div>
+            <div class="password-strength">
+              <div class="strength-bar"><div class="strength-progress" id="strength-progress"></div></div>
+              <span class="strength-text" id="strength-text">Password strength indicator</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="signup-confirm">Confirm Password <span class="required">*</span></label>
+            <div class="password-input-group">
+              <input type="password" id="signup-confirm" class="form-control" placeholder="Re-enter password" required>
+              <button type="button" class="password-toggle-btn" data-target="signup-confirm">👁</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Date of Birth & Gender -->
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="signup-dob">Date of Birth <span class="required">*</span></label>
+            <input type="date" id="signup-dob" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="signup-gender">Gender <span class="required">*</span></label>
+            <select id="signup-gender" class="form-control" required>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- State, District, City -->
+        <div class="form-row-3">
+          <div class="form-group">
+            <label class="form-label" for="signup-state">State <span class="required">*</span></label>
+            <input type="text" id="signup-state" class="form-control" placeholder="Maharashtra" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="signup-district">District <span class="required">*</span></label>
+            <input type="text" id="signup-district" class="form-control" placeholder="Mumbai Suburban" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="signup-city">City <span class="required">*</span></label>
+            <input type="text" id="signup-city" class="form-control" placeholder="Mumbai" required>
+          </div>
+        </div>
+
+        <!-- Full Residential Address -->
+        <div class="form-group">
+          <label class="form-label" for="signup-address">Residential Address</label>
+          <input type="text" id="signup-address" class="form-control" placeholder="Apartment, Street address, Area">
+        </div>
+
+        <!-- Register as donor checkbox -->
+        <div style="background:#FFF5F5; border:1px solid #FFCDD2; padding:16px; border-radius:var(--radius-md); margin: 20px 0;">
+          <label class="checkbox-label" style="font-weight:700;">
+            <input type="checkbox" id="signup-is-donor" checked>
+            <span>Register me as an available Blood Donor on BloodConnect</span>
+          </label>
+          <p style="font-size:12.5px; color:var(--color-text-muted); margin-top:4px; margin-left:27px;">
+            You will receive instant alerts when a critical patient in your city requires your blood group.
+          </p>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg">Complete Registration</button>
+      </form>
+
+      <div class="auth-footer">
+        Already have an account? <a href="login.html">Log In here</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

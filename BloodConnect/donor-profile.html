@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donor Profile - BloodConnect</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="main-header">
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/images/logo.png" alt="BloodConnect AI Logo" class="nav-logo">
+        <div class="nav-title-group">
+          <span class="nav-title">BloodConnect <span style="color:var(--color-primary); font-size:17px;">AI</span></span>
+          <span class="nav-tagline">Smart Donor & Notification System</span>
+        </div>
+      </a>
+      <div class="nav-auth-buttons" id="navbar-auth-section"></div>
+    </div>
+  </header>
+
+  <div class="container" style="padding-top:28px; padding-bottom:60px;">
+    <div style="margin-bottom:20px; display:flex; justify-content:space-between; align-items:center;">
+      <a href="find-donors.html" class="btn btn-secondary btn-sm">← Back to Find Donors</a>
+      <a href="dashboard.html" class="btn btn-outline btn-sm">My Dashboard</a>
+    </div>
+
+    <!-- Donor Profile Container (PRD Module 12, 16) -->
+    <div id="donor-profile-container">
+      <!-- Injected via donors.js -->
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/donors.js"></script>
+</body>
+</html>
